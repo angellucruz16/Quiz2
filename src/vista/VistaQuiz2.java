@@ -7,7 +7,7 @@ public class VistaQuiz2 extends PApplet{
 
 	Controlador controlador;
 
-
+	
 
 	public void settings() {
 
@@ -44,18 +44,19 @@ public class VistaQuiz2 extends PApplet{
 
 			if (keyCode == RIGHT) {
 				
-				
+				controlador.moverMarcianoDerecha();
 
 			} if (keyCode == LEFT) {	
 				
-				
+				controlador.moverMarcianoIzquiera();
 			} 
 		} //CODED
 		
 		if (key == ' ') {
-		
+			
+			controlador.disparar();
 		}
 		
 	} //KEYPRESSED
-
+m
 } //CLASE
