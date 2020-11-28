@@ -12,7 +12,7 @@ public class VistaQuiz2 extends PApplet{
 	//Marciano marciano;
 	public void settings() {
 
-		size(1000,500);
+		size(800,500);
 	
 		
 				
@@ -25,7 +25,7 @@ public class VistaQuiz2 extends PApplet{
 		nave = new Nave (this);
 		
 		bala = null;
-		marcianos = new Marciano[24];
+		marcianos = new Marciano [24];
 		for (int i = 0; i < 24; i++) {
 			marcianos[i] = new Marciano(this, 500, 100);
 		}

@@ -13,6 +13,7 @@ public class Marciano extends Personaje{
 	}
 	
 	public void render() {
+		
 		sketch.fill(0,100,0);
 		sketch.circle(xpos, ypos, rad);
 		
