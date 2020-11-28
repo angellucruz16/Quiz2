@@ -72,9 +72,19 @@ public class VistaQuiz2 extends PApplet{
 		
 		if (key == ' ') {
 			
-			bala = new Bala(this, nave.xpos, nave.ypos);
-			controlador.disparar();
+			if (bala != null) {
+				if (bala.terminoRecorridoBala ) {
+					
+					bala = new Bala(this, nave.xpos, nave.ypos);
+				}
+			} else {
+				
 			
+				
+			bala = new Bala(this, nave.xpos, nave.ypos);
+		//	controlador.disparar();
+				
+			}
 		}
 		
 	} //KEYPRESSED
