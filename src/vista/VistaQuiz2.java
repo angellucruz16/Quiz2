@@ -6,28 +6,43 @@ import controlador.Controlador;
 public class VistaQuiz2 extends PApplet{
 
 	Controlador controlador;
-
-	
+	Nave nave;
+	Bala bala;
 
 	public void settings() {
 
 		size(1000,500);
-	}
+	
+		
+				
+	} //SETTINGS
 
 	public void setup() {
 
 		controlador = new Controlador(this);
+		
+		nave = new Nave (this);
+		
+		bala = null;
+		
+		noStroke ();
+		
+		rectMode(CENTER); 
 
-
-
-	}
+	} //SETUP
 
 	public void draw() {
+		
 		background(255);
-		//controlador.pintar();
+		nave.render();
+		
+		if  (bala != null) {
+			
+			bala.render();
+		}
 		
 
-	}
+	} //DRAE
 	
 	
 	public static void main(String[] args) {
@@ -44,19 +59,24 @@ public class VistaQuiz2 extends PApplet{
 
 			if (keyCode == RIGHT) {
 				
-				controlador.moverMarcianoDerecha();
+				controlador.moverNaveDerecha();
+				nave.moverDerechaNave();
+				
 
 			} if (keyCode == LEFT) {	
 				
-				controlador.moverMarcianoIzquiera();
+				controlador.moverNaveIzquiera();
+				nave.moverIzquierdaNave();
 			} 
 		} //CODED
 		
 		if (key == ' ') {
 			
+			bala = new Bala(this, nave.xpos, nave.ypos);
 			controlador.disparar();
+			
 		}
 		
 	} //KEYPRESSED
-m
+
 } //CLASE

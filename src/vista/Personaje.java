@@ -5,6 +5,9 @@ import processing.core.PApplet;
 public class Personaje {
 	PApplet sketch;
 
+	float xpos; 
+	float ypos;
+	int rad;
 	
 	public PApplet getSketch() {
 		return sketch;
@@ -45,10 +48,6 @@ public class Personaje {
 		this.rad = rad;
 	}
 
-
-	float xpos; 
-	float ypos;
-	int rad;
 	
 	public Personaje(PApplet app) {
 		
