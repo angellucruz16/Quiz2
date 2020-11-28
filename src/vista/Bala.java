@@ -12,7 +12,7 @@ public class Bala extends Personaje {
 		
 		xpos = x;
 		ypos = y;
-		rad = 5;
+		rad = 10;
 		
 		
 		terminoRecorridoBala = false;
@@ -22,7 +22,7 @@ public class Bala extends Personaje {
 	public void render () {
 		
 		sketch.fill(0);
-		sketch.rect(xpos, ypos , rad, rad);
+		sketch.ellipse(xpos, ypos , rad, rad);
 		
 		moverse ();
 		

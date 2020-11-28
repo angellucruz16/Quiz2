@@ -8,6 +8,7 @@ public class Personaje {
 	float xpos; 
 	float ypos;
 	int rad;
+	int id;
 	
 	public PApplet getSketch() {
 		return sketch;
@@ -58,5 +59,11 @@ public class Personaje {
 	public void render () {
 		
 	}
+	
+	public int getId() {
+		return id;
+	}
+
+
 	
 } //CLASE
