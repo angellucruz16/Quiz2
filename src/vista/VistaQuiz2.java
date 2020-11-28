@@ -8,7 +8,8 @@ public class VistaQuiz2 extends PApplet{
 	Controlador controlador;
 	Nave nave;
 	Bala bala;
-
+	Marciano[]marcianos;
+	//Marciano marciano;
 	public void settings() {
 
 		size(1000,500);
@@ -24,6 +25,11 @@ public class VistaQuiz2 extends PApplet{
 		nave = new Nave (this);
 		
 		bala = null;
+		marcianos = new Marciano[24];
+		for (int i = 0; i < 24; i++) {
+			marcianos[i] = new Marciano(this, 500, 100);
+		}
+		
 		
 		noStroke ();
 		
@@ -35,7 +41,7 @@ public class VistaQuiz2 extends PApplet{
 		
 		background(255);
 		nave.render();
-		
+		marciano.render();
 		if  (bala != null) {
 			
 			bala.render();
